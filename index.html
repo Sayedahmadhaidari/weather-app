@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="app-container">
+
+        <!-- =========================
+             APPLICATION HEADER
+        ========================== -->
+        <header class="app-header">
+            <div class="hero-card">
+                <!-- Live Clock -->
+                <div id="liveClock" class="live-clock">
+                    00:00:00
+                </div>
+                <h2 id="greeting"></h2>
+
+                <!-- Application Title -->
+                <h1>Weather App</h1>
+                <p> Check current weather conditions and 5-day forecast around the world</p>
+
+            </div>
+
+        </header>
+
+        <!-- =========================
+             SEARCH SECTION
+        ========================== -->
+        <section class="search-section">
+
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Enter your city name"autocomplete="off">
+                <button id="searchButton">Search</button>
+            </div>
+
+            <div class="controls-row">
+                <button id="locationButton" class="location-button"> Use My Location</button>
+                <select id="languageSelect">
+                    <option value="en">English</option>
+                    <option value="fa">فارسی</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- =========================
+             STATUS MESSAGES
+        ========================== -->
+
+        <p id="errorMessage" class="message error-message"></p>
+        <p id="loadingMessage" class="message loading-message">⏳ Loading weather data...</p>
+
+        <!-- =========================
+             CURRENT WEATHER SECTION
+        ========================== -->
+        <section id="weatherSection" class="weather-section">
+            <div class="current-weather">
+                <div class="weather-main">
+                    <div>
+                        <h2 id="cityName">Herat, Afghanistan </h2>
+                        <p id="currentDate"></p>
+                    </div>
+                    <img id="weatherIcon"src=""alt="Weather Icon">
+                </div>
+
+                <div class="temperature-section">
+                    <h3 id="temperature">25℃</h3>
+                    <p id="weatherDescription"> Clear Sky</p>
+                    <p id="weatherStatus"></p>
+                </div>
+
+                <div class="weather-details">
+
+                    <article class="detail-card">
+                        <h4 id="feelsLikeTitle">🌡 Feels Like</h4>
+                        <p id="feelslike">23℃</p>
+                    </article>
+
+                    <article class="detail-card">
+                        <h4 id="humidityTitle">💧 Humidity</h4>
+                        <p id="humidity"> 40%</p>
+                    </article>
+
+                    <article class="detail-card">
+                        <h4 id="windSpeedTitle"> 🌬 Wind Speed </h4>
+                        <p id="windSpeed"> 13 km/h</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             5-DAY FORECAST SECTION
+        ========================== -->
+        <section class="forecast-section">
+            <h2> 5-Day Forecast</h2>
+
+            <div
+                id="forecastContainer"
+                class="forecast-container">
+            </div>
+
+        </section>
+
+        <!-- =========================
+             APPLICATION FOOTER
+        ========================== -->
+        <footer class="app-footer">
+
+            <p>© 2026 Sayed Ahmad Haidari | Weather App Project</p>
+        </footer>
+
+    </main>
+
+    <!-- Main JavaScript File -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
